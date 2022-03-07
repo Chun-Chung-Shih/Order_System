@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d4bceb;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="template.try_demo.ReportGenerationController">
+   <children>
+      <VBox layoutX="37.0" layoutY="15.0" prefHeight="370.0" prefWidth="224.0">
+         <children>
+            <Button fx:id="stockTakeBtn" mnemonicParsing="false" onAction="#stockTakeAction" prefHeight="78.0" prefWidth="228.0" text="Stocktake Report" />
+            <Button fx:id="quarterlyBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#quarterlyAction" prefHeight="78.0" prefWidth="228.0" text="Quarterly Sales Report">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="customerDemographicBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#customerDemoAction" prefHeight="78.0" prefWidth="228.0" text="Customer Demographic Report">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="monthlyReportBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#monthlyReportAction" prefHeight="80.0" prefWidth="224.0" text="Monthly Report">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="288.0" layoutY="129.0" prefHeight="102.0" prefWidth="281.0" style="-fx-background-color: #8e63bf;" text="Generate your report" textFill="#eae3e3">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

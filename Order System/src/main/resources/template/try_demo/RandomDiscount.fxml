@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="530.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="template.try_demo.DiscountController">
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="153.0" prefHeight="70.0" prefWidth="379.0" style="-fx-background-color: #4287f5;" text="15% OFF" textFill="#e4ece5">
+         <font>
+            <Font name="Arial Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="353.0" layoutY="94.0" text="BUY NOW!!" textFill="#ec0808">
+         <font>
+            <Font name="Arial Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefHeight="84.0" prefWidth="805.0" style="-fx-background-color: #44bcd8;" text="ON SALE" textFill="#f7f3f3">
+         <font>
+            <Font name="Arial Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="Table" layoutX="14.0" layoutY="225.0" prefHeight="271.0" prefWidth="379.0">
+        <columns>
+          <TableColumn fx:id="colItem" prefWidth="46.40002632141113" text="item ID" />
+          <TableColumn fx:id="colProduct" prefWidth="100.7999496459961" text="product type" />
+            <TableColumn fx:id="colSize" prefWidth="50.4000244140625" text="Size" />
+            <TableColumn fx:id="colColor" prefWidth="102.4000244140625" text="Color" />
+            <TableColumn fx:id="colPrice" prefWidth="77.5999755859375" text="New Price" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="417.0" layoutY="154.0" prefHeight="70.0" prefWidth="366.0" style="-fx-background-color: #4ac248;" text="30% OFF" textFill="#e4ece5">
+         <font>
+            <Font name="Arial Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="Table2" layoutX="417.0" layoutY="225.0" prefHeight="271.0" prefWidth="366.0">
+         <columns>
+            <TableColumn fx:id="colItem3" prefWidth="50.39996337890625" text="item ID" />
+            <TableColumn fx:id="colProduct2" prefWidth="81.60006713867188" text="product type" />
+            <TableColumn fx:id="colSize2" prefWidth="50.4000244140625" text="Size" />
+            <TableColumn fx:id="colColor2" prefWidth="112.7999267578125" text="Color" />
+            <TableColumn fx:id="colPrice2" prefWidth="72.0" text="New Price" />
+         </columns>
+      </TableView>
+      <Label layoutX="23.0" layoutY="108.0" text="Total item number: " />
+      <TextField fx:id="totalItemNumberNow" layoutX="134.0" layoutY="104.0" prefHeight="23.0" prefWidth="60.0" promptText="Total" />
+      <Button layoutX="204.0" layoutY="104.0" mnemonicParsing="false" onAction="#updateTotalItemNumber" text="generate" />
+      <Label fx:id="errorMsg" layoutX="23.0" layoutY="127.0" prefHeight="22.0" prefWidth="176.0" textFill="#437eea" />
+   </children>
+</AnchorPane>

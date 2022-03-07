@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="template.try_demo.StockTakeReportController">
+    <children>
+        <TableView fx:id="StockTable" layoutY="-2.0" prefHeight="400.0" prefWidth="613.0">
+            <columns>
+                <TableColumn fx:id="colItem" prefWidth="75.99997103214264" text="id" />
+                <TableColumn fx:id="colProduct" prefWidth="106.39989471435547" text="product" />
+                <TableColumn fx:id="colDescription" prefWidth="288.800048828125" text="description" />
+                <TableColumn fx:id="colQuantity" minWidth="0.0" prefWidth="147.19998168945312" text="quantity" />
+            </columns>
+        </TableView>
+        <PieChart layoutX="361.0" prefHeight="211.0" prefWidth="250.0" />
+    </children>
+</AnchorPane>

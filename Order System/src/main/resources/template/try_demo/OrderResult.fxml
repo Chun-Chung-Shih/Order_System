@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="652.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="template.try_demo.CreditCardController">
+   <children>
+      <BorderPane prefHeight="652.0" prefWidth="426.0" style="-fx-background-color: #e8dcf5;">
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="498.0" prefWidth="426.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="656.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="126.0" text="Order ID">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="OrderId_pay">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="56.0" prefHeight="38.0" prefWidth="426.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="126.0" text="Customer ID">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="orderCustomerId_pay">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="42.0" prefWidth="426.0">
+                     <children>
+                        <Label prefHeight="23.0" prefWidth="126.0" text="Customer Name">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="customerName_pay" prefHeight="23.0" prefWidth="163.0">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin></TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="44.0" prefWidth="656.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="126.0" text="Order Month">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="orderMonth_pay">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="50.0" prefHeight="50.0" prefWidth="656.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="126.0" text="Number of Item Types">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="numberOfPieces_pay">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="35.0" prefWidth="426.0">
+                     <children>
+                        <Button fx:id="showInfoBtn" mnemonicParsing="false" onAction="#showCustomerOrderInfo" text="Show Order Details" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="Table" prefHeight="159.0" prefWidth="426.0">
+                    <columns>
+                      <TableColumn fx:id="ItemTypeCol" prefWidth="58.40002363920212" text="Item ID" />
+                        <TableColumn fx:id="productTypeCol" prefWidth="108.79999160766602" text="Product Type" />
+                      <TableColumn fx:id="quantityCol" prefWidth="75.99998474121094" text="Quantity" />
+                        <TableColumn fx:id="priceCol" prefWidth="55.99998474121094" text="Price" />
+                        <TableColumn fx:id="availCol" prefWidth="121.5999755859375" text="Availability" />
+                    </columns>
+                  </TableView>
+                  <HBox prefHeight="38.0" prefWidth="656.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="258.0" text="Confirm finish order and show total amount: ">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="verifyName" mnemonicParsing="false" onAction="#onVerifyNameButtonClick" text="Confirm">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Italic" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="27.0" prefWidth="426.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="129.0" text="Payment Amount">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="paymentAmount_pay" prefHeight="23.0" prefWidth="268.0" promptText="Will show amount once click  &quot;Confirm&quot;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="423.0" prefHeight="47.0" prefWidth="426.0">
+                     <children>
+                        <Label prefHeight="23.0" prefWidth="148.0" text="Expected Delivery Date">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="deliveryDate_pay" prefHeight="23.0" prefWidth="162.0">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="426.0">
+                     <children>
+                        <Label prefHeight="23.0" prefWidth="129.0" text="Credit Card Type">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="creditCardType_pay" prefHeight="23.0" prefWidth="211.0" promptText="Enter card type ex: Visa">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="42.0" prefWidth="426.0">
+                     <children>
+                        <Label prefHeight="23.0" prefWidth="129.0" text="Credit Card Number">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="creditCardNumber_pay" prefHeight="23.0" prefWidth="217.0" promptText="Enter card number">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="404.0">
+                     <children>
+                        <Label prefHeight="23.0" prefWidth="134.0" text="Credit Card Valid Date">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="creditCardDate_pay" prefHeight="23.0" prefWidth="86.0" promptText="1/1/2021" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="426.0">
+                     <children>
+                        <Button fx:id="creditCardEnter" layoutX="290.0" layoutY="10.0" mnemonicParsing="false" onAction="#onProcessButtonClick" prefHeight="30.0" prefWidth="155.0" text="Process Payment">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <HBox prefHeight="30.0" prefWidth="452.0" style="-fx-background-color: #ccccff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="31.0" prefWidth="426.0" style="-fx-background-color: #8e63bf;" text="Payment Process" textFill="#fcfafa">
+                     <font>
+                        <Font name="Arial Bold Italic" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
